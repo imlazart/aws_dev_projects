@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git clone
             }
         }
         stage('Terraform Init') {
             steps {
-                sh 'cd /path/to/your/terraform/project && terraform init'
+                sh 'terraform init'
             }
         }
         stage('Terraform Apply') {
             steps {
-                sh 'cd /path/to/your/terraform/project && terraform apply -auto-approve'
+                sh 'terraform apply -auto-approve'
             }
         }
     }
