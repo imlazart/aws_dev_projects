@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git clone
+                git branch: 'main', url: 'https://github.com/imlazart/aws_dev_projects.git'
             }
         }
         stage('Terraform Init') {
